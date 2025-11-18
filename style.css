@@ -32,3 +32,21 @@ body{
 #money::before{
     content: "💵";
 }
+
+.cat_info{
+    height: 15%;
+}
+
+#CatArea{
+    height: 60%;
+}
+
+#cat{
+    width: 254px;
+    height: 254px;
+}
+
+.itemShop img{
+    width: 100px;
+    height: 100px;
+}

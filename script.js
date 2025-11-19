@@ -3,6 +3,7 @@ let CatFoodData = 100;
 let MoneyData = 1000;
 let ToiletDate = 0;
 
+let cat = document.getElementById("cat");
 let CatHpLabel = document.getElementById("hp");
 let CatFoodLabel = document.getElementById("food");
 let Money = document.getElementById("money");
@@ -44,6 +45,19 @@ function ToiltBuy() {
     if (MoneyData >= 50) {
         MoneyData -= 50;
         Money.textContent = MoneyData + "$";
+        function ToiletNo(){
+    if (ToiletDate <= 10){
+        ToiletDate = 0;
+    } else{
+        ToiletDate -= 10;
+    }
+    
+   ToiletLabel.textContent = "Wc: " + ToiletDate + "%";
+}
+
+if (ToiletDate > 0){
+    ToiletNo();
+}
     } else {
         alert("Nincs elég pénzed wc-re!");
     }
@@ -57,9 +71,31 @@ function wcNovekves() {
         } else {
             clearInterval(interval);
         }
-    }, 1000);
+    }, 3000);
 }
 
 if (ToiletDate < 100) {
     wcNovekves();
+}
+
+function KajaCsokken() {
+    const interval2 = setInterval(() => {
+        if (CatFoodData > 0) {
+            CatFoodData -= 2;
+            CatFoodLabel.textContent = CatFoodSzoveg + " " + CatFoodData + "%";
+        } else {
+            clearInterval(interval2);
+        }
+    }, 2000);
+}
+
+if (CatFoodData > 0){
+    KajaCsokken();
+}
+
+
+function CatPatMove() {
+    cat.classList.remove('pulse');
+    void cat.offsetWidth; 
+    cat.classList.add('pulse');
 }

@@ -56,3 +56,51 @@ body{
 #Toilet::before{
     content: "🚽";
 }
+
+#cat:checked {
+    animation: pulse 2s;
+    transition: 1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#cat {
+    transition: transform 0.3s;
+}
+
+/* Ez az osztály adja az animációt */
+.pulse {
+    animation: pulse 0.5s forwards;
+}
+
+#cat {
+    transition: transform 0.3s;
+}
+
+.pulse {
+    animation: pulse 0.5s forwards;
+}
+
+#cat {
+    transition: transform 0.3s;
+}
+
+.pulse {
+    animation: pulse 0.5s forwards;
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

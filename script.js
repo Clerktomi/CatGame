@@ -28,6 +28,7 @@ function CatPat() {
     Money.textContent = MoneyData + "$";
 }
 
+//Van baj wefzewfu9ffuw
 function PulseRise(){
     PusleData += 4;
     pulseLabel.textContent = PulseSzoveg + " " + PusleData;

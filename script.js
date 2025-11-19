@@ -28,10 +28,16 @@ function CatPat() {
     Money.textContent = MoneyData + "$";
 }
 
+function PulseRise(){
+    PusleData += 4;
+    pulseLabel.textContent = PulseSzoveg + " " + PusleData;
+}
+
 function CoffeBuy() {
     if (MoneyData >= 30) {
         MoneyData -= 30;
         Money.textContent = MoneyData + "$";
+        PulseRise();
     } else {
         AlertArea.textContent = "Nincs elég pénzed kávéra!";
         setTimeout(() => {
@@ -112,8 +118,4 @@ function CatPatMove() {
     cat.classList.remove('pulse');
     void cat.offsetWidth; 
     cat.classList.add('pulse');
-}
-
-function PulseRise(){
-    
 }

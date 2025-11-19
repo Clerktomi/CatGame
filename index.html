@@ -11,19 +11,27 @@
     
     <div class="box">
         <div class="cat_info">
+            <div class="row my-2">
+                <div class="col-6 text-center  d-flex align-items-center justify-content-center">
+                    <label for="" id="Pulse" class="text-white h5"></label>
+                </div>
+                <div class="col-6 text-center d-flex align-items-center justify-content-center">
+                    <label for="" id="AlertArea" class="text-white p"></label>
+                </div>
+            </div>
             <div class="row my-1">
-                <div class="col-6 text-center ">
+                <div class="col-6 text-center d-flex align-items-center justify-content-center">
                     <label for="" id="hp" class="text-white h5"></label>
                 </div>
-                <div class="col-6 text-center">
+                <div class="col-6 text-center d-flex align-items-center justify-content-center">
                     <label for="" id="food" class="text-white h5"></label>
                 </div>
             </div>
             <div class="row my-1">
-                <div class="col-6 text-center ">
+                <div class="col-6 text-center d-flex align-items-center justify-content-center">
                     <label for="" id="money" class="text-white h5"></label>
                 </div>
-                <div class="col-6 text-center">
+                <div class="col-6 text-center d-flex align-items-center justify-content-center">
                     <label for="" id="Toilet" class="text-white h5"></label>
                 </div>
             </div>
@@ -33,7 +41,7 @@
         </div>
         <div class="itemShop row">
             <div class="col-4 text-center">
-                <img src="pictures/coffe.png" alt="" onclick="CoffeBuy()">
+                <img src="pictures/coffe.png" alt="" onclick="CoffeBuy(); PulseRise()">
                 <p>Kávé: 30$</p>
             </div>
             <div class="col-4 text-center">

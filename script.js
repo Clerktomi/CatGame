@@ -2,14 +2,18 @@ let CatHpData = 100;
 let CatFoodData = 100;
 let MoneyData = 1000;
 let ToiletDate = 0;
+let PusleData = 80;
 
 let cat = document.getElementById("cat");
 let CatHpLabel = document.getElementById("hp");
 let CatFoodLabel = document.getElementById("food");
 let Money = document.getElementById("money");
 let ToiletLabel = document.getElementById("Toilet");
+let pulseLabel = document.getElementById("Pulse");
+let AlertArea = document.getElementById("AlertArea");
 
 let CatHpSzoveg = "Életerő: ";
+let PulseSzoveg = "Pulzus: ";
 let CatFoodSzoveg = "Kaja: ";
 let Toilet = "Wc: ";
 
@@ -17,6 +21,7 @@ CatHpLabel.textContent = CatHpSzoveg + CatHpData + "%";
 CatFoodLabel.textContent = CatFoodSzoveg + CatFoodData + "%";
 Money.textContent = MoneyData + "$";
 ToiletLabel.textContent = Toilet + " " + ToiletDate + "%";
+pulseLabel.textContent = PulseSzoveg + " " + PusleData;
 
 function CatPat() {
     MoneyData += 10;
@@ -28,7 +33,10 @@ function CoffeBuy() {
         MoneyData -= 30;
         Money.textContent = MoneyData + "$";
     } else {
-        alert("Nincs elég pénzed kávéra!");
+        AlertArea.textContent = "Nincs elég pénzed kávéra!";
+        setTimeout(() => {
+            AlertArea.textContent = "";
+        }, 3000);
     }
 }
 
@@ -37,7 +45,10 @@ function BeefBuy() {
         MoneyData -= 100;
         Money.textContent = MoneyData + "$";
     } else {
-        alert("Nincs elég pénzed marhahúsra!");
+        AlertArea.textContent = "Nincs elég pénzed marhahúsra!";
+        setTimeout(() => {
+            AlertArea.textContent = "";
+        }, 3000);
     }
 }
 
@@ -59,7 +70,10 @@ if (ToiletDate > 0){
     ToiletNo();
 }
     } else {
-        alert("Nincs elég pénzed wc-re!");
+        AlertArea.textContent = "Nincs elég pénzed wcre!";
+        setTimeout(() => {
+            AlertArea.textContent = "";
+        }, 3000);
     }
 }
 
@@ -98,4 +112,8 @@ function CatPatMove() {
     cat.classList.remove('pulse');
     void cat.offsetWidth; 
     cat.classList.add('pulse');
+}
+
+function PulseRise(){
+    
 }
